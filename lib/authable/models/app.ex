@@ -7,9 +7,6 @@ defmodule Authable.Model.App do
   import Ecto.Changeset
   alias Authable.Model.{Client, User}
 
-  @primary_key {:id, :binary_id, autogenerate: true}
-  @foreign_key_type :binary_id
-
   schema "apps" do
     field :scope, :string
     belongs_to :client, Client

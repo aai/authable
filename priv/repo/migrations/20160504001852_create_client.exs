@@ -2,8 +2,7 @@ defmodule Authable.Repo.Migrations.CreateClient do
   use Ecto.Migration
 
   def change do
-    create table(:clients, primary_key: false) do
-      add :id, :uuid, primary_key: true
+    create table(:clients) do
       add :name, :string
       add :secret, :string
       add :redirect_uri, :string

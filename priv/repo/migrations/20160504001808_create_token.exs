@@ -2,8 +2,7 @@ defmodule Authable.Repo.Migrations.CreateToken do
   use Ecto.Migration
 
   def change do
-    create table(:tokens, primary_key: false) do
-      add :id, :uuid, primary_key: true
+    create table(:tokens) do
       add :name, :string
       add :value, :string
       add :expires_at, :integer

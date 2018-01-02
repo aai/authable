@@ -8,11 +8,9 @@ defmodule Authable.Model.User do
   alias Authable.Utils.Crypt, as: CryptUtil
   alias Authable.Model.{Token, Client, App}
 
-  @primary_key {:id, :binary_id, autogenerate: true}
-
   schema "users" do
     field :email, :string
-    field :password, :string
+    field :password, :string, virtual: true
     field :settings, :map
     field :priv_settings, :map
     has_many :clients, Client
